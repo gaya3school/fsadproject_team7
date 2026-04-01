@@ -1,0 +1,32 @@
+Frontend Requirements
+A. Authentication Flow
+Register Screen: Simple form (Username, Email, Password).
+
+Note: The backend handles the IP detection, so the user doesn't need to enter their location manually.
+
+Login Screen: Returns the JWT.
+
+Requirement: Store this JWT in localStorage or sessionStorage and include it in the Authorization: Bearer <token> header for all future calls.
+
+B. The "Discovery" Dashboard
+Hyperlocal Feed: A grid of recipes where the zone matches the user's defaultZone.
+
+Search Bar: A real-time search input that hits the /api/recipes/search?q=... endpoint.
+
+Global/Local Toggle: A filter to switch between "My Neighborhood" and "Trending Worldwide."
+
+C. Recipe Creation (The Multi-part Form)
+Form Data: Title, Ingredients (dynamic list), and Steps.
+
+Image Picker: A file input.
+
+API Logic: You must use FormData in JavaScript to send both the JSON part and the Image file to the POST /api/recipes endpoint.
+
+D. Recipe Detail & AI Interactivity
+Smart Suggestions Sidebar: Display the list of similar recipes returned by the Jaccard similarity endpoint.
+
+The "AI Chef" Tweak Tool: * A dropdown menu: [Vegan, Keto, Low-Spice, Gluten-Free].
+
+A "Tweak It" button that calls /api/ai/tweak/{id}?diet=....
+
+A loading spinner (Ollama takes 2–5 seconds to generate a response locally).
