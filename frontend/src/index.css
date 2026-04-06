@@ -1,0 +1,106 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #fff8f1;
+}
+
+h1, h2, h3 {
+  font-family: 'Lexend', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.recipe-card-shadow {
+  box-shadow: 0 32px 32px -4px rgba(89, 65, 57, 0.06);
+}
+
+.recipe-gradient {
+  background: radial-gradient(circle at top right, #ffdbd0 0%, #fff8f1 100%);
+}
+
+.ambient-shadow {
+  box-shadow: 0 32px 32px -4px rgba(89, 65, 57, 0.06);
+}
+
+.tonal-island {
+  box-shadow: 0 32px 32px -4px rgba(89, 65, 57, 0.06);
+}
+
+.recipe-shadow {
+  box-shadow: 0 32px 32px -4px rgba(89, 65, 57, 0.06);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #e1bfb5;
+}
+
+/* Page visibility */
+.nb-page {
+  display: none !important;
+}
+
+.nb-page.nb-active {
+  display: block !important;
+}
+
+/* Transition */
+.nb-page.nb-active {
+  animation: nbFadeIn 0.25s ease;
+}
+
+@keyframes nbFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active nav link style */
+.nb-nav-active {
+  color: #ab3500 !important;
+  border-bottom: 2px solid #ab3500;
+  padding-bottom: 2px;
+}
+
+/* Active sidebar item */
+.nb-side-active {
+  background: #ab3500 !important;
+  color: white !important;
+  border-radius: 9999px;
+}
+
+/* Active mobile nav */
+.nb-mob-active {
+  color: #ab3500 !important;
+}
